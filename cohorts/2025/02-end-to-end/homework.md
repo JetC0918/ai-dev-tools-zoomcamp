@@ -42,6 +42,7 @@ What's the initial prompt you gave to AI to start the implementation?
 
 Copy and paste it in the homework form.
 
+```Create an interactive web app (no real backend — all network interactions mocked and centralized through a single api module) that implements a platform for online coding interviews with these features: generate a shareable interview link and create/join interview sessions; a collaborative code panel where everyone who connects can edit the same document with real-time updates broadcast to all connected users (simulate other participants with mocked play/typing logic so the UI shows live activity); support syntax highlighting and language selection for multiple languages; a safe in-browser code execution environment (sandboxed iframe or WebWorker-based executor) that runs user code and displays stdout/stderr and test results without any server execution; session UI including a problem/description panel, participant list, chat, run button, and ability to follow/observe any participant’s cursor and edits (mocked spectator behavior); authentication flows with interactive sign up / log in mockups showing username when logged in; a session lobby and basic permissions (host vs. participant) simulated in the front end; a leaderboard-style view that can display aggregated performance metrics (fully mocked) and a “watching” view to spectate a live interview; all calls to the backend are routed through one centralized module so replacing mocks with a real API later is straightforward; comprehensive unit and integration tests that cover collaborative editing logic, session lifecycle (create/join/leave), link generation, authentication UI state, language selection, sandboxed execution safety, and mocked real-time updates; and polished interactive mockups/screens for login, session lobby, collaborative editor, run/output panel, and spectator  views. ```
 
 ## Question 2: Integration Tests
 
@@ -55,7 +56,7 @@ Also it's a good idea to ask it to start creating a `README.md` file with all th
 
 What's the terminal command you use for executing tests?
 
-
+`uv run pytest tests`
 
 ## Question 3: Running Both Client and Server
 
@@ -63,6 +64,7 @@ Now let's make it possible to run both client and server at the same time. Use `
 
 What's the command you have in `package.json` for `npm dev` for running both?
 
+`concurrently \"npm run dev --prefix frontend\" \"make run -C backend\`
 
 ## Question 4: Syntax Highlighting
 
@@ -70,7 +72,7 @@ Let's now add support for syntax highlighting for JavaScript and Python.
 
 Which library did AI use for it?
 
-
+`Monaco Editor `
 
 ## Question 5: Code Execution
 
@@ -80,6 +82,7 @@ For security reasons, we don't want to execute code directly on the server. Inst
 
 Which library did AI use for compiling Python to WASM?
 
+`Pyodide `
 
 ## Question 6: Containerization
 
@@ -87,6 +90,7 @@ Now let's containerize our application. Ask AI to help you create a Dockerfile f
 
 What's the base image you used for your Dockerfile?
 
+`python:3.12-slim`
 
 ## Question 7: Deployment
 
@@ -94,6 +98,7 @@ Now let's deploy it. Choose a service to deploy your application.
 
 Which service did you use for deployment?
 
+`Render`
 
 ## Homework URL
 
